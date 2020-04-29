@@ -6,7 +6,7 @@ import MiniCard from '../components/MiniCard'
 //   'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=songs&type=video&key=[YOUR_API_KEY]'\
 // AIzaSyAfVoVXG2g - Rk6BZweiWF - ei6B - X4jfkXI
 
-const Search = () => {
+const Search = ({navigation}) => {
     
         const [value, setValue] = useState("")
         const [miniCardData, setMiniCard] = useState([])
@@ -28,7 +28,9 @@ const Search = () => {
                 justifyContent:'space-around',
                 elevation:5,
                 backgroundColor:'white' }}>
-                    <Icon name="md-arrow-back" size={32} />
+                    <Icon name="md-arrow-back" size={32} 
+                        onPress={() => navigation.goBack()}
+                    />
                     <TextInput 
                         style={{
                             width:'70%',

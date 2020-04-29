@@ -3,8 +3,7 @@ import {View, Text,ScrollView} from 'react-native'
 import Header from '../components/Header'
 import Card from '../components/Card'
 
-export default class Home extends Component {
-  render() {
+export default function Home (navigation){
     return (
       <View>
           <Header />
@@ -18,4 +17,3 @@ export default class Home extends Component {
       </View>
     )
   }
-}
